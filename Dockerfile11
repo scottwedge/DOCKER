@@ -1,0 +1,13 @@
+# first comment
+# second comment
+
+FROM nginx:latest
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+ENV NAME2="My Name"
+
+# Create directory /temp in current folder
+COPY /temp/ .    
