@@ -4,6 +4,7 @@
 FROM nginx:latest
 
 LABEL maintainer=scott.wedge@gmail.com
+LABEL maintainer2=scott.wedge2@gmail.com
 
 WORKDIR /usr/share/nginx/html
 
