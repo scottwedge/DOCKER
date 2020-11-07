@@ -1,0 +1,6 @@
+# Pull base image
+FROM python:nov6
+
+WORKDIR /code
+
+COPY app/src/ .
