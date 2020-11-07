@@ -1,0 +1,15 @@
+# first comment
+# second comment
+
+FROM nginx:latest
+
+LABEL maintainer=scott.wedge@gmail.com
+LABEL maintainer2=scott.wedge2@gmail.com
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+ENV NAME2="My Name"
+
+RUN /bin/bash -c "echo $HOME" > temp14
