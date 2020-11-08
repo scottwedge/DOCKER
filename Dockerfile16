@@ -1,0 +1,19 @@
+# first comment
+# second comment
+
+FROM nginx:latest
+
+EXPOSE 80
+
+LABEL maintainer=scott.wedge@gmail.com
+LABEL maintainer2=scott.wedge2@gmail.com
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+ENV NAME2="My Name"
+ENV MyDog=Rex\ the\ Dog
+
+RUN /bin/bash -c "echo $HOME" > temp16
+RUN /bin/bash -c "echo Image build date is: $date" >> temp16
