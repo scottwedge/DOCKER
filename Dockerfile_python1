@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY app/src/ .
 
-RUN ["python3", "./server.py"]
+CMD ["python3", "./server.py"]
