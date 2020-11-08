@@ -1,6 +1,10 @@
 # Pull base image
 FROM python:nov6
 
+LABEL Build=Python_app
+
 WORKDIR /code
 
 COPY app/src/ .
+
+RUN ["python", "./server.py"]
