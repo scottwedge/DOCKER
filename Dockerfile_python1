@@ -1,10 +1,14 @@
 # Pull base image
-FROM python:nov6
+FROM python:3.8.5
 
 LABEL Build=Python_app
 
 WORKDIR /code
 
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
 COPY app/src/ .
 
-RUN ["python", "./server.py"]
+RUN ["python3", "./server.py"]
