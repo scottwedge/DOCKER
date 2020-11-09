@@ -16,4 +16,4 @@ ENV NAME2="My Name"
 ENV MyDog=Rex\ the\ Dog
 
 RUN /bin/bash -c "echo $HOME" > temp16
-RUN /bin/bash -c "echo Image build date is: $date" >> temp16
+RUN /bin/bash -c "echo Image build date is: `date`" >> temp16
