@@ -6,11 +6,11 @@ server = Flask(__name__)
 def hello():
     return "Hello World!"
 
-@server.route("time1")
+@server.route("/time1")
 def time1():
     return "Current time is: datetime.datetime.now()"
 
-@server.route("time2")
+@server.route("/time2")
 def time2():
     return "Current time is: datetime.datetime.utcnow()"
 
