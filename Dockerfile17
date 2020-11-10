@@ -15,6 +15,8 @@ COPY . .
 ENV NAME2="My Name"
 ENV MyDog=Rex\ the\ Dog
 
+RUN /bin/bash -c "useradd -m swedge -p password"
 USER swedge
+
 RUN /bin/bash -c "echo $HOME" > temp17
 RUN /bin/bash -c "echo Image build date is: `date`" >> temp17
