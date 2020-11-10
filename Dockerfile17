@@ -18,7 +18,7 @@ ENV MyDog=Rex\ the\ Dog
 RUN /bin/bash -c "useradd -m swedge -p password"
 RUN /bin/bash -c "touch temp17"
 RUN /bin/bash -c "chmod 777 temp17"
-USER swedge
+#USER swedge
 
 RUN /bin/bash -c "echo $HOME" > temp17
 RUN /bin/bash -c "echo Image build date is: `date`" >> temp17
