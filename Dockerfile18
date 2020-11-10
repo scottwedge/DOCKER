@@ -1,0 +1,30 @@
+# first comment
+# second comment
+
+FROM nginx:latest
+
+EXPOSE 80
+
+LABEL maintainer=scott.wedge@gmail.com
+LABEL maintainer2=scott.wedge2@gmail.com
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+ENV NAME2="My Name"
+ENV MyDog=Rex\ the\ Dog
+ENV FILE="temp18"
+
+RUN /bin/bash -c "useradd -m swedge -p password"
+RUN /bin/bash -c "touch $FILE"
+RUN /bin/bash -c "chmod 777 $FILE"
+
+USER swedge
+
+RUN /bin/bash -c "echo $HOME" > $FILE
+
+USER root
+
+RUN /bin/bash -c "echo Image build date is: `date`" >> $FILE
+
