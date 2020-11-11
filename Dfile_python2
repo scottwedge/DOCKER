@@ -1,0 +1,16 @@
+# Pull base image
+FROM python:3.9.0
+
+LABEL Build=Python_app
+
+WORKDIR /code
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY app/src/ .
+
+EXPOSE 5000
+
+CMD ["python3", "server.py"]
